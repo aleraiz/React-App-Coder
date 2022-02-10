@@ -1,0 +1,19 @@
+@import '../../../App.scss';
+
+.MenuHeaderDiv {
+    width: 400px;
+
+    ul{
+        display: flex;
+
+            li {
+                width: 100%;
+
+                a{
+                    color: $textos-color;
+                }
+                
+
+            }
+    }
+}

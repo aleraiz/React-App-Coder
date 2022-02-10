@@ -1,0 +1,27 @@
+@import '../../../App.scss';
+
+.UserHeaderDiv{
+    width: 120px;
+
+    ul{
+        display: flex;
+
+        li{
+            width: 100%;
+
+            a{
+                color: $textos-color;
+            }
+            
+        }
+
+        div{
+            display: flex;
+            p{
+                color: $textos-color;
+                font-size: x-small;
+                margin-left: 4px;
+            }
+        }
+    }
+}
