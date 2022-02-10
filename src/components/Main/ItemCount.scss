@@ -1,0 +1,23 @@
+.agregar {
+    margin: 200px 200px;
+
+    
+
+    .itemCountDiv {
+        display: flex;
+        width: 100px;
+        justify-content: space-between;
+        
+        button {
+            width: 30px;
+        }
+    }
+    
+    .addButtonDiv{
+        margin-top: 20px;
+        width: 200px;
+        align-items: center;
+
+    }
+}
+
