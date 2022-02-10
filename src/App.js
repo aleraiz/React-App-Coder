@@ -1,6 +1,6 @@
 import './App.scss';
 import Header from './components/Header/Header';
-import Contador from './components/Main/Contador';
+import ItemCount from './components/Main/ItemCount';
 import logo from './logo.svg';
 
 function App() {
@@ -8,7 +8,10 @@ function App() {
     <div className="App">
       <Header/>
       {/* <img src={logo} className="App-logo" alt="logo" /> */}
-      <Contador/>
+      <ItemCount
+        initial={1}
+        stock={8}
+      />
     </div>
   );
 }
