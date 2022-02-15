@@ -20,36 +20,36 @@ const DBproducts = [{
     "name": "Jeans",
     "category": "accesorios",
     "price": 3990,
-    "stock": 5,
+    "stock": 4,
     "imageUrl": "https://github.com/aleraiz/js-EntregaFinal/blob/master/img/pant1.png?raw=true"
   }, {
     "id": 4,
-    "name": "Bufanda tipo chal",
-    "category": "accesorios",
-    "price": 990,
-    "stock": 5,
-    "imageUrl": "https://github.com/aleraiz/js-EntregaFinal/blob/master/img/bufanda.png?raw=true"
+    "name": "Body",
+    "category": "superiores",
+    "price": 2990,
+    "stock": 7,
+    "imageUrl": "https://github.com/aleraiz/js-EntregaFinal/blob/master/img/prenda4.png?raw=true"
   }, {
     "id": 5,
-    "name": "Cinturon",
-    "category": "accesorios",
-    "price": 1990,
-    "stock": 10,
-    "imageUrl": "https://github.com/aleraiz/js-EntregaFinal/blob/master/img/cinturon1.png?raw=true"
+    "name": "Sandalias",
+    "category": "zapatos",
+    "price": 4990,
+    "stock": 9,
+    "imageUrl": "https://github.com/aleraiz/js-EntregaFinal/blob/master/img/zap4.png?raw=true"
   }, {
     "id": 6,
-    "name": "Bufanda tipo chal",
+    "name": "Sombrero panameño",
     "category": "accesorios",
     "price": 990,
     "stock": 5,
-    "imageUrl": "https://github.com/aleraiz/js-EntregaFinal/blob/master/img/bufanda.png?raw=true"
+    "imageUrl": "https://github.com/aleraiz/js-EntregaFinal/blob/master/img/sombrero3.png?raw=true"
   }, {
     "id": 7,
     "name": "Cinturon",
     "category": "accesorios",
     "price": 1990,
-    "stock": 10,
-    "imageUrl": "https://github.com/aleraiz/js-EntregaFinal/blob/master/img/cinturon1.png?raw=true"
+    "stock": 11,
+    "imageUrl": "https://github.com/aleraiz/js-EntregaFinal/blob/master/img/cinturon5.png?raw=true"
   }, {
     "id": 8,
     "name": "Bufanda tipo chal",
@@ -62,15 +62,15 @@ const DBproducts = [{
     "name": "Jeans",
     "category": "accesorios",
     "price": 3990,
-    "stock": 5,
+    "stock": 4,
     "imageUrl": "https://github.com/aleraiz/js-EntregaFinal/blob/master/img/pant1.png?raw=true"
   }, {
     "id": 10,
-    "name": "Bufanda tipo chal",
-    "category": "accesorios",
-    "price": 990,
+    "name": "Camisa abotonada",
+    "category": "superiores",
+    "price": 2990,
     "stock": 8,
-    "imageUrl": "https://github.com/aleraiz/js-EntregaFinal/blob/master/img/bufanda.png?raw=true"
+    "imageUrl": "https://github.com/aleraiz/js-EntregaFinal/blob/master/img/prenda11.png?raw=true"
   }]
 
 function obtenerDatosDB() {
