@@ -1,13 +1,17 @@
 import './App.scss';
 import Header from './components/Header/Header';
-import ItemCount from './components/Main/ItemCount';
-import ItemListContainer from './components/Main/ItemListCointainer/ItemListContainer'
+// import ItemCount from './components/Main/ItemCount';
+import ItemDetailContainer from './components/Main/ItemDetailContainer/ItemDetailContainer';
+// import ItemListContainer from './components/Main/ItemListCointainer/ItemListContainer'
 
 function App() {
   return (
     <div className="App">
       <Header/>
-      <ItemListContainer/>
+      {/* <ItemListContainer/> */}
+      <ItemDetailContainer
+        idProduct = {7}
+      />
     </div>
   );
 }
