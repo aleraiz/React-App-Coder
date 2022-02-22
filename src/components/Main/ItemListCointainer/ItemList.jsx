@@ -3,7 +3,6 @@ import Item from './Item';
 import './ItemList.scss'
 
 const ItemList = ({items}) => {
-    console.log(items);
   return (
     <div className='containerProducts'>
         {

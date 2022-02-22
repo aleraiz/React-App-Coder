@@ -1,13 +1,15 @@
 import React from 'react';
 import './MenuHeader.scss';
+import { Link } from 'react-router-dom';
 
 const MenuHeader = () => {
   return (
   <div className='MenuHeaderDiv'>
       <ul>
-          <li><a href="">Home</a></li>
-          <li><a href="">Productos</a></li>
-          <li><a href="">Contacto</a></li>
+          <li><Link to="/">Home</Link></li>
+          <li><Link to="/categoria/prendas">Prendas</Link></li>
+          <li><Link to="/categoria/accesorios">Accesorios</Link></li>
+          <li><Link to="/categoria/zapatos">Zapatos</Link></li>
       </ul>
   </div>
   );
