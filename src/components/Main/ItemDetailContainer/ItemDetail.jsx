@@ -1,9 +1,17 @@
 import React from 'react'
 import './ItemDetail.scss'
 import ItemCount from '../ItemCount'
+import { Link } from 'react-router-dom'
 
 
 const ItemDetail = ({item}) => {
+
+    let [inCart, setInCart] = React.useState(false);
+
+    function onAdd(count){
+        setInCart(true);
+        alert(`Agregaste ${count} elementos al carrito`)
+      }
 
     if (item) {
   return (
@@ -19,12 +27,28 @@ const ItemDetail = ({item}) => {
                 <h4>$ {item.price}</h4>
             </div>
             <div className='addCart'>
-                <ItemCount
-                    initial={1}
-                    stock={item.stock}
-                />
+
+                {/* rendering condicional */}
+
+                {/* if */}
+                { inCart? (
+                        <Link to="/cart">
+                        <button>Finalizar tu compra</button>
+                        </Link>
+                    ) : (
+                        <ItemCount
+                        initial={1}
+                        stock={item.stock}
+                        onAdd={onAdd}
+                    />
+
+                        ) }
+
+       
                 <p>Stock disponible : {item.stock}</p>
             </div>
+
+
         </div>
     </div>
     ) 
