@@ -1,6 +1,7 @@
-import React , {useState, useEffect} from 'react'
+import React , {useState, useEffect, useContext} from 'react'
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
+import { CarritoContext } from '../../../context/CarritoProveedor';
 
 const DBproducts = [{
     "id": 1,
@@ -105,6 +106,9 @@ function getItem(idProduct) {
 
 const ItemDetailContainer = () => {
 
+  // const {nombre} = useContext(CarritoContext)
+  // console.log(nombre)
+  
 const [item, setitem] = useState();
 const {id} = useParams();
 

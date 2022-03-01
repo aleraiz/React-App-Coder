@@ -2,15 +2,16 @@ import React from 'react'
 import './ItemDetail.scss'
 import ItemCount from '../ItemCount'
 import { Link } from 'react-router-dom'
+import useCartContext from '../../../context/CartContext'
 
 
 const ItemDetail = ({item}) => {
 
-    let [inCart, setInCart] = React.useState(false);
+    const { addItem, isInCart, removeItemFromCart } = useCartContext();
+  
 
     function onAdd(count){
-        setInCart(true);
-        alert(`Agregaste ${count} elementos al carrito`)
+        addItem(item, count)
       }
 
     if (item) {
@@ -31,7 +32,7 @@ const ItemDetail = ({item}) => {
                 {/* rendering condicional */}
 
                 {/* if */}
-                { inCart? (
+                { isInCart(item.id) ? (
                         <Link to="/cart">
                         <button>Finalizar tu compra</button>
                         </Link>
@@ -48,8 +49,9 @@ const ItemDetail = ({item}) => {
                 <p>Stock disponible : {item.stock}</p>
             </div>
 
-
+            <button onClick={()=>removeItemFromCart(item.id)}>Eliminar del carrito</button>
         </div>
+        
     </div>
     ) 
     }else {

@@ -121,7 +121,6 @@ function obtenerDatosDB(categoryid) {
 
 const ItemListContainer = () => {
   let {categoryid} = useParams();
-  console.log(categoryid);
 
 const [items, setitems] = useState([]);
 
@@ -136,7 +135,7 @@ useEffect( () => {
         console.log(errorMsg);
     })
     .finally( ()=> {
-        console.log('Promesa terminada');
+        // console.log('Promesa terminada');
     });
 
 
