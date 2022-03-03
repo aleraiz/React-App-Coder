@@ -1,7 +1,6 @@
 import React , {useState, useEffect, useContext} from 'react'
 import ItemDetail from './ItemDetail';
 import { useParams } from 'react-router-dom';
-import { CarritoContext } from '../../../context/CarritoProveedor';
 
 const DBproducts = [{
     "id": 1,
@@ -111,7 +110,7 @@ const ItemDetailContainer = () => {
   
 const [item, setitem] = useState();
 const {id} = useParams();
-
+const [isloading,setisloading] = useState(true);
 
 useEffect( () => {
         let requestDatos = getItem(id);
@@ -124,6 +123,7 @@ useEffect( () => {
         console.log(errorMsg);
     })
     .finally( ()=> {
+        setisloading(false);
         console.log('Promesa terminada');
     });
 
@@ -133,7 +133,7 @@ useEffect( () => {
 
   return (
     <>
-        <ItemDetail item={item}/>
+    {isloading ? <h1>Cargando...</h1> : <ItemDetail item={item}/> }
     </>
   ); 
 };

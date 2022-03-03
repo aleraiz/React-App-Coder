@@ -29,10 +29,20 @@ export function CartContextProvider ({children}) {
         setItemsInCart(filterCart);
       }
   
-  
+    function clearCart(){
+      setItemsInCart([]);
+    }
+
+    function countItemsInCart(){
+      let total = 0;
+      itemsInCart.forEach( (item) =>{
+        total += item.qty;
+      })
+      return total;
+    }
   
     return (
-    <CartContext.Provider value={ { addItem, isInCart, removeItemFromCart, quantity: 5, itemsInCart } }>
+    <CartContext.Provider value={ { addItem, isInCart, removeItemFromCart, clearCart, countItemsInCart, quantity: 5, itemsInCart } }>
         {children}
     </CartContext.Provider>
   )

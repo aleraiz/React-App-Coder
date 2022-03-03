@@ -123,12 +123,14 @@ const ItemListContainer = () => {
   let {categoryid} = useParams();
 
 const [items, setitems] = useState([]);
+const [isloading,setisloading] = useState(true);
 
 useEffect( () => {
         let requestDatos = obtenerDatosDB(categoryid);
 
     requestDatos
     .then( (itemsPromise) =>{
+        setisloading(false);
         setitems(itemsPromise);
     })
     .catch( (errorMsg) => {
@@ -144,7 +146,7 @@ useEffect( () => {
 
   return (
     <>
-        <ItemList items={items}/>
+    {isloading ? <h1>Cargando...</h1> : <ItemList items={items}/> }
     </>
   ); 
 };

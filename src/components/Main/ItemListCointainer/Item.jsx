@@ -11,11 +11,11 @@ const Item = ({item}) => {
             <h3>{item.name}</h3>
             <h4>$ {item.price}</h4>
         </div>
-        <ItemCount
+        {/* <ItemCount
         initial={1}
         stock={item.stock}
-      />
-      <p>Stock disponible : {item.stock}</p>
+      /> */}
+      {/* <p>Stock disponible : {item.stock}</p> */}
     </div>
   )
 }

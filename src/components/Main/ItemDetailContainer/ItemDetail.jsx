@@ -33,7 +33,7 @@ const ItemDetail = ({item}) => {
 
                 {/* if */}
                 { isInCart(item.id) ? (
-                        <Link to="/cart">
+                        <Link to="/cartView">
                         <button>Finalizar tu compra</button>
                         </Link>
                     ) : (
