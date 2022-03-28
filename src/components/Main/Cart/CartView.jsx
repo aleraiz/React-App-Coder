@@ -7,14 +7,8 @@ import "./CartView.scss";
 const CartView = () => {
   const { itemsInCart, removeItemFromCart, clearCart, totalItemsInCart } =
     useCartContext();
-  const [total, setTotal] = useState("");
 
-  itemsInCart.map((item) =>
-    console.log(item)
-    // setTotal(...total,(item.qty * item.price).toFixed(0))
-  );
-
-  console.log(total)
+  const [pagar, setPagar] = useState(false);
 
   if (itemsInCart.length === 0) {
     return (
@@ -61,24 +55,25 @@ const CartView = () => {
                 ))}
               </tbody>
             </table>
-            <div>
-              <h3>Total: {totalItemsInCart()} </h3>
+            <div className="totalPriceCart">
+              <h3>Total: {` $ ${totalItemsInCart()}`} </h3>
             </div>
             <button
+              className="ButtonCart"
               onClick={() => {
-                alert("Compra realizada");
+                setPagar(true);
               }}
             >
               Pagar
             </button>
-            <button onClick={clearCart}>Vaciar Carrito</button>
+            <button className="ButtonCart" onClick={clearCart}>
+              Vaciar Carrito
+            </button>
             <Link to="/">
-              <button>Seguir comprando</button>
+              <button className="ButtonCart">Seguir comprando</button>
             </Link>
           </div>
-          <div className="Checkout-formulario">
-            <Checkout />
-          </div>
+          {pagar == true ? <Checkout /> : <></>}
         </div>
       </>
     );

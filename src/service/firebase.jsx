@@ -69,3 +69,14 @@ export async function getItems(productid){
     }
 }
 
+export async function generateOrder(orderData, idNumeroOrden){
+    try {
+        const micoleccion = collection(db,"orders");
+        const order = await addDoc(micoleccion,orderData);
+        alert(`El formulario se ha enviado. El id de su compra es: ${order.id} `);
+        return idNumeroOrden = order.id
+        
+    } catch(error) {
+        console.error('Error enviando los datos:',error);
+    }
+} 
