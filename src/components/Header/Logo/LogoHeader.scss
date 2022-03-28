@@ -3,7 +3,13 @@
 
 .div-LogoHeader {
     h1 {
-        color: $textos-color;
+        color: $texto-blanco;
         cursor: pointer;
+        font-family: $textos-estilos;
+
+        &:hover {
+            color: $textos-color;
+        }
+
     }
 }

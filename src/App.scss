@@ -1,5 +1,6 @@
 /////////////////////      VARIABLES       ////////////////////////
 
+$texto-blanco: white;
 $textos-color: #f8d134;
 $textos-estilos: 'Encode Sans SC', sans-serif;
 
@@ -11,8 +12,10 @@ $textos-estilos: 'Encode Sans SC', sans-serif;
 
 a {
   text-decoration: none;
+  color: $texto-blanco;
 } 
 
 li {
   list-style: none;
+  color:$texto-blanco;
 }

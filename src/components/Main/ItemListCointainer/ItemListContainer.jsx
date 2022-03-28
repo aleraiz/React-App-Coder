@@ -7,21 +7,18 @@ import { getAllItems, getCategoryItems } from '../../../service/firebase';
 
 const ItemListContainer = () => {
   let {category} = useParams();
-
-const [items, setitems] = useState([]);
+  const [items, setitems] = useState([]);
 
 
 useEffect( () => {
-        // let requestDatos = getAllItems();
         let requestDatos = category? getCategoryItems(category) : getAllItems() ;
-
+        
     requestDatos
     .then( (itemsPromise) =>{
         setitems(itemsPromise);
     })
 },
   [category]);
-
 
 
   return (

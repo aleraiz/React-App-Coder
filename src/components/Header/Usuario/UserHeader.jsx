@@ -1,5 +1,5 @@
 import React from 'react';
-import './UsuerHeader.scss'
+import './UserHeader.scss'
 import { Link } from 'react-router-dom'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'

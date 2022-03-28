@@ -10,8 +10,17 @@
                 width: 100%;
 
                 a{
-                    color: $textos-color;
+                    // color: white;
+                    font-family: $textos-estilos;
+                    
+                
+                    &:hover{
+                        color: $textos-color;
+                        font-weight: bolder;
+                    }
                 }
+
+
                 
 
             }
