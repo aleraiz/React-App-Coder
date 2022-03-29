@@ -1,21 +1,24 @@
 import React, { useState } from "react";
 import useCartContext from "../../../context/CartContext";
-import { generateOrder } from '../../../service/firebase';
+import { generateOrder } from "../../../service/firebase";
 
 const Checkout = () => {
   const { itemsInCart, totalItemsInCart } = useCartContext();
 
-  const [form, setForm] = useState({
+  const initialForm = {
     buyer: {
       name: "",
-      apellido:"",
+      apellido: "",
       phone: "",
       email: "",
     },
     items: itemsInCart,
     total: totalItemsInCart(),
-    date:Date.now()
-  });
+    date: Date.now(),
+  };
+
+  const [error, setError] = useState(null);
+  const [form, setForm] = useState(initialForm);
 
   const handleChange = (e) => {
     setForm({
@@ -29,12 +32,25 @@ const Checkout = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const orderData = form
-    console.log(form)
-    generateOrder(orderData);
+
+    if (
+      !form.buyer.name.trim() ||
+      !form.buyer.apellido.trim() ||
+      !form.buyer.phone.trim() ||
+      !form.buyer.email.trim()
+    ) {
+      setError(true);
+    } else setError(false);
+
+    if (error == false) {
+      const orderData = form;
+      generateOrder(orderData);
+      setError(null);
+      setTimeout(() => {
+        setForm(initialForm);
+      }, 5000);
+    }
   };
-
-
 
   return (
     <div className="Checkout-formulario">
@@ -72,10 +88,9 @@ const Checkout = () => {
           value={form.buyer.email}
           onChange={handleChange}
         />
+        {error == true ? <h4>Debe completar todos los campos</h4> : <></>}
         <button type="sumbit">Finalizar compra</button>
       </form>
-              {/* {<button onClick={() => {
-              }}>Volver</button> } */}
     </div>
   );
 };

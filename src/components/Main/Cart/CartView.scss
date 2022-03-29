@@ -91,8 +91,7 @@
           font-family: $textos-estilos;
           cursor: pointer;
           margin: 20px 10px 10px;
-          
-    
+
           &:hover {
             // background-color: rgb(76, 69, 69);
             background-color: rgb(240, 207, 23);
@@ -106,15 +105,15 @@
       width: 60px;
     }
 
-    .totalPriceCart{
+    .totalPriceCart {
       width: 100%;
       margin-top: 20px;
-      
-        h3{
-          color: rgb(76, 69, 69);
-          font-family: $textos-estilos;
-          text-align: center;
-        }
+
+      h3 {
+        color: rgb(76, 69, 69);
+        font-family: $textos-estilos;
+        text-align: center;
+      }
     }
 
     .ButtonCart {

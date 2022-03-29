@@ -1,4 +1,3 @@
-import { faPoundSign } from "@fortawesome/free-solid-svg-icons";
 import React, { useState, createContext, useContext } from "react";
 
 const CartContext = createContext();
