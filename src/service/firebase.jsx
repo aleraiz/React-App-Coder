@@ -82,3 +82,5 @@ export async function generateOrder(orderData, idNumeroOrden) {
     console.error("Error enviando los datos:", error);
   }
 }
+
+
